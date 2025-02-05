@@ -18,7 +18,7 @@ needs_exe_wrapper = true
 skip_sanity_check = true
 sys_root = ''
 platform = 'generic'
-pkg_config_libdir = '/data/ohos/tpc_c_cplusplus/lycium/usr/libshaderc/arm64-v8a/lib/pkgconfig:/data/ohos/tpc_c_cplusplus/lycium/usr/libdovi/arm64-v8a:/data/ohos/tpc_c_cplusplus/lycium/usr/xxhash/arm64-v8a/lib/pkgconfig:/data/ohos/tpc_c_cplusplus/lycium/usr/lcms2/arm64-v8a/lib/pkgconfig'
+pkg_config_libdir = '/data/ohos/tpc_c_cplusplus/lycium/usr/gettext/arm64-v8a/lib/pkgconfig:/data/ohos/tpc_c_cplusplus/lycium/usr/shaderc/arm64-v8a/lib/pkgconfig:/data/ohos/tpc_c_cplusplus/lycium/usr/libdovi/arm64-v8a:/data/ohos/tpc_c_cplusplus/lycium/usr/xxhash/arm64-v8a/lib/pkgconfig:/data/ohos/tpc_c_cplusplus/lycium/usr/lcms2/arm64-v8a/lib/pkgconfig'
 
 [built-in options]
 c_args = [
@@ -29,8 +29,9 @@ c_args = [
     '-mfloat-abi=softfp',
     '-I/data/ohos/tpc_c_cplusplus/lycium/usr/lcms2/arm64-v8a/include', 
     '-I/data/ohos/tpc_c_cplusplus/lycium/usr/xxhash/arm64-v8a/include', 
-    '-I/data/ohos/tpc_c_cplusplus/lycium/usr/libshaderc/arm64-v8a/include', 
+    '-I/data/ohos/tpc_c_cplusplus/lycium/usr/shaderc/arm64-v8a/include', 
     '-I/data/ohos/tpc_c_cplusplus/lycium/usr/libdovi/arm64-v8a/include', 
+    '-I/data/ohos/tpc_c_cplusplus/lycium/usr/gettext/arm64-v8a/include', 
     ]
 cpp_args = [
     '-D__MUSL__=1',
@@ -40,8 +41,9 @@ cpp_args = [
     '-mfloat-abi=softfp',
     '-I/data/ohos/tpc_c_cplusplus/lycium/usr/lcms2/arm64-v8a/include', 
     '-I/data/ohos/tpc_c_cplusplus/lycium/usr/xxhash/arm64-v8a/include', 
-    '-I/data/ohos/tpc_c_cplusplus/lycium/usr/libshaderc/arm64-v8a/include', 
+    '-I/data/ohos/tpc_c_cplusplus/lycium/usr/shaderc/arm64-v8a/include', 
     '-I/data/ohos/tpc_c_cplusplus/lycium/usr/libdovi/arm64-v8a/include', 
+    '-I/data/ohos/tpc_c_cplusplus/lycium/usr/gettext/arm64-v8a/include', 
     ]
 
 c_link_args = [
@@ -49,14 +51,18 @@ c_link_args = [
     '-L/data/ohos/ohos_sdk/linux/native/sysroot/usr/lib/aarch64-linux-ohos',
     '-L/data/ohos/tpc_c_cplusplus/lycium/usr/lcms2/arm64-v8a/lib', 
     '-L/data/ohos/tpc_c_cplusplus/lycium/usr/xxhash/arm64-v8a/lib', 
-    '-L/data/ohos/tpc_c_cplusplus/lycium/usr/libshaderc/arm64-v8a/lib', 
+    '-L/data/ohos/tpc_c_cplusplus/lycium/usr/shaderc/arm64-v8a/lib', 
+    '-L/data/ohos/tpc_c_cplusplus/lycium/usr/gettext/arm64-v8a/lib', 
     '-L/data/ohos/tpc_c_cplusplus/lycium/usr/libdovi/arm64-v8a', 
+    '-lintl'
     ]
 cpp_link_args = [
     '-L/data/ohos/ohos_sdk/linux/native/llvm/lib/aarch64-linux-ohos',
     '-L/data/ohos/ohos_sdk/linux/native/sysroot/usr/lib/aarch64-linux-ohos',
     '-L/data/ohos/tpc_c_cplusplus/lycium/usr/lcms2/arm64-v8a/lib', 
     '-L/data/ohos/tpc_c_cplusplus/lycium/usr/xxhash/arm64-v8a/lib', 
-    '-L/data/ohos/tpc_c_cplusplus/lycium/usr/libshaderc/arm64-v8a/lib', 
+    '-L/data/ohos/tpc_c_cplusplus/lycium/usr/shaderc/arm64-v8a/lib', 
+    '-L/data/ohos/tpc_c_cplusplus/lycium/usr/gettext/arm64-v8a/lib', 
     '-L/data/ohos/tpc_c_cplusplus/lycium/usr/libdovi/arm64-v8a', 
+    '-lintl'
     ]
